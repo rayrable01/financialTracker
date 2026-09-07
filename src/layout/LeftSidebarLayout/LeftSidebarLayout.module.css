@@ -1,0 +1,11 @@
+.wrapper {
+  max-width: 300px;
+  width: 100%;
+  background-color: var(--leftSidebarBg);
+  padding: 20px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+}

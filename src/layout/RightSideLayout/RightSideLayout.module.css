@@ -1,0 +1,8 @@
+.wrapper {
+  background-color: #b7b7b7; 
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}

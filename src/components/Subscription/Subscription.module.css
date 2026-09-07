@@ -1,0 +1,18 @@
+.wrapper {
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(215deg, rgb(163 64 255 / 53%), rgb(57 48 48 / 30%), transparent);
+  margin-bottom: auto;
+}
+
+.title {
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.descr {
+  margin: 0;
+  line-height: 1.5;
+}
