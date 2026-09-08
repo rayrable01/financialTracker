@@ -1,9 +1,18 @@
-import styles from './RightSideLayout.module.css';
+import { Navigate, Route, Routes } from "react-router-dom";
+import styles from "./RightSideLayout.module.css";
+import { routes } from "../../routes/routes";
 
 export const RightSideLayout = () => {
   return (
     <div className={styles.wrapper}>
-      <div style={{backgroundColor: 'white', borderRadius: '17px', height: '100%'}}>Hello</div>
+      <div className={styles.content}>
+        <Routes>
+          {routes.map(({ path, component: Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          ))}
+          <Route path="*" element={<Navigate to='/dasboard' replace />} />
+        </Routes>
+      </div>
     </div>
-  )
-}
+  );
+};

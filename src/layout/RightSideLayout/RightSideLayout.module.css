@@ -6,3 +6,9 @@
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+
+.content {
+  background-color: white;
+  border-radius: 17px;
+  height: 100%;
+}
