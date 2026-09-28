@@ -1,23 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root {
-  --text: dark;
+:root,
+:root[data-theme='light'] {
   --globalAroundMargin: 30px;
-  --bg: #fff;
-  --leftSidebarBg: black;
 
-  color-scheme: light dark;
+  /* Page background */
+  --bg: #f0f2f5;
+
+  /* Content area */
+  --rightWrapperBg: #e4e6eb;
+  --contentBg: #ffffff;
+
+  /* Typography */
+  --text: #111827;
+  --textSecondary: #6b7280;
+
+  /* Left Sidebar */
+  --leftSidebarBg: #000000;
+  --leftSidebarText: #ffffff;
+  --leftSidebarTextMuted: #9ca3af;
+  --leftSidebarHover: #1a1818;
+  --leftSidebarBorder: rgba(255, 255, 255, 0.15);
+
+  /* Controls (Search, buttons, switcher) */
+  --controlBg: #e5e7eb;
+  --controlBorder: #d1d5db;
+  --controlHoverBg: #dbe0e6;
+  --controlActiveBg: #ffffff;
+
+  color-scheme: light;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #fff;
-    --bg: grey;
-  }
+:root[data-theme='dark'] {
+  /* Page background */
+  --bg: #090a0f;
+
+  /* Content area */
+  --rightWrapperBg: #1a1b23;
+  --contentBg: #12131a;
+
+  /* Typography */
+  --text: #f9fafb;
+  --textSecondary: #9ca3af;
+
+  /* Left Sidebar */
+  --leftSidebarBg: #000000;
+  --leftSidebarText: #ffffff;
+  --leftSidebarTextMuted: #9ca3af;
+  --leftSidebarHover: #1a1818;
+  --leftSidebarBorder: rgba(255, 255, 255, 0.12);
+
+  /* Controls (Search, buttons, switcher) */
+  --controlBg: #222430;
+  --controlBorder: #2e3040;
+  --controlHoverBg: #2b2d3c;
+  --controlActiveBg: #161720;
+
+  color-scheme: dark;
 }
 
 *,
@@ -38,6 +81,9 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 a {

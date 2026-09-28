@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+}
+
+.themeButton {
+  background-color: var(--controlBg);
+  outline: 1px solid var(--controlBorder);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--textSecondary);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--controlHoverBg);
+  }
+}
+
+.active {
+  background-color: var(--controlActiveBg);
+  color: var(--text);
+}
+
+.sunButton {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.moonButton {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

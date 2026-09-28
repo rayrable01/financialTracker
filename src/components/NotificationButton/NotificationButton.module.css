@@ -1,0 +1,17 @@
+.notificationButton {
+  background-color: var(--controlBg);
+  color: var(--text);
+  outline: 1px solid var(--controlBorder);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--controlHoverBg);
+  }
+}

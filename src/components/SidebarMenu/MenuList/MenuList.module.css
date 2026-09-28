@@ -15,16 +15,18 @@
   border-radius: 5px;
   padding-left: 15px;
   margin-bottom: 5px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  color: var(--leftSidebarText);
 
   &:hover {
-    background-color: #1a1818;
+    background-color: var(--leftSidebarHover);
   }
-
 }
 
 .title {
   margin-bottom: 20px;
-  font-weight: 200;
+  font-weight: 500;
+  font-size: 13px;
   letter-spacing: 1.5px;
+  color: var(--leftSidebarTextMuted);
 }

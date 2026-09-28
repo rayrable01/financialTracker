@@ -4,7 +4,7 @@ import styles from './CompanyLogo.module.css';
 export const CompanyLogo = () => {
   return (
     <a href='#' className={styles.companyLogo}>
-      <BadgeDollarSign color='white' size={40} />
+      <BadgeDollarSign size={40} />
       YOUNG TRAD.
     </a>
   )

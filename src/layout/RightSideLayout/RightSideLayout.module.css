@@ -1,14 +1,18 @@
 .wrapper {
-  background-color: #b7b7b7; 
+  background-color: var(--rightWrapperBg);
   width: 100%;
   padding: 20px;
   height: 100%;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
+  transition: background-color 0.25s ease;
 }
 
 .content {
-  background-color: white;
+  background-color: var(--contentBg);
+  color: var(--text);
   border-radius: 17px;
   height: 100%;
+  padding: 15px;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
