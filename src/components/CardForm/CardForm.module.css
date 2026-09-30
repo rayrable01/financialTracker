@@ -1,0 +1,179 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--textSecondary);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  height: 36px;
+  padding: 6px 10px;
+  background-color: var(--controlBg);
+  border: 1px solid var(--controlBorder);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 2px rgb(124, 58, 237, 0.15);
+}
+
+.inputError {
+  border-color: #ef4444 !important;
+}
+
+.inputError:focus {
+  box-shadow: 0 0 0 2px rgb(239, 68, 68, 0.15);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorText {
+  font-size: 11px;
+  color: #ef4444;
+  margin-top: 1px;
+}
+
+/* Выбор градиента карты */
+.gradientSelectorRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2px 0 4px;
+}
+
+.gradientSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.colorOption {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s, border-color 0.2s;
+  padding: 0;
+}
+
+.colorOption:hover {
+  transform: scale(1.15);
+}
+
+.colorOptionSelected {
+  border-color: var(--text);
+  transform: scale(1.2);
+  box-shadow: 0 0 0 2px var(--controlBorder);
+}
+
+.purple {
+  background: linear-gradient(135deg, #6d28d9, #ec4899);
+}
+
+.dark {
+  background: linear-gradient(135deg, #18181b, #3f3f46);
+}
+
+.emerald {
+  background: linear-gradient(135deg, #065f46, #10b981);
+}
+
+.sunset {
+  background: linear-gradient(135deg, #b45309, #e11d48);
+}
+
+.blue {
+  background: linear-gradient(135deg, #1e40af, #06b6d4);
+}
+
+/* Кнопки формы */
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.submitButton {
+  flex: 1;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #6d28d9;
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  height: 38px;
+  padding: 0 14px;
+  background-color: transparent;
+  border: 1px solid var(--controlBorder);
+  color: var(--text);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: var(--controlHoverBg);
+}

@@ -1,0 +1,243 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.countBadge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background-color: var(--controlBg);
+  color: var(--textSecondary);
+  border: 1px solid var(--controlBorder);
+}
+
+.cardsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Карточка в списке */
+.cardItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--controlBg);
+  border: 1px solid var(--controlBorder);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardItem:hover {
+  transform: translateY(-1px);
+  border-color: rgb(124, 58, 237, 0.4);
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.08);
+}
+
+.activeEditing {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 2px rgb(124, 58, 237, 0.2) !important;
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Миниатюрная плашка визуала */
+.miniVisual {
+  width: 48px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.purple {
+  background: linear-gradient(135deg, #6d28d9, #ec4899);
+}
+
+.dark {
+  background: linear-gradient(135deg, #18181b, #3f3f46);
+}
+
+.emerald {
+  background: linear-gradient(135deg, #065f46, #10b981);
+}
+
+.sunset {
+  background: linear-gradient(135deg, #b45309, #e11d48);
+}
+
+.blue {
+  background: linear-gradient(135deg, #1e40af, #06b6d4);
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardNumber {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--textSecondary);
+}
+
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.balanceBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.balanceLabel {
+  font-size: 11px;
+  color: var(--textSecondary);
+  text-transform: uppercase;
+}
+
+.balanceAmount {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actionBtn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid var(--controlBorder);
+  background-color: var(--contentBg);
+  color: var(--textSecondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionBtn:hover:not(:disabled) {
+  color: var(--text);
+  border-color: var(--textSecondary);
+}
+
+.deleteBtn:hover:not(:disabled) {
+  color: #ef4444 !important;
+  border-color: #ef4444 !important;
+  background-color: rgb(239, 68, 68, 0.08);
+}
+
+.actionBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Пустое состояние */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border-radius: 12px;
+  border: 2px dashed var(--controlBorder);
+  color: var(--textSecondary);
+  text-align: center;
+  gap: 12px;
+}
+
+.emptyIcon {
+  color: var(--textSecondary);
+  opacity: 0.6;
+}
+
+.emptyText {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.emptySubtext {
+  font-size: 13px;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Скелетон загрузки */
+.skeletonList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeletonItem {
+  height: 72px;
+  border-radius: 12px;
+  background-color: var(--controlBg);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,207 @@
+.cardContainer {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1.586 / 1;
+  border-radius: 14px;
+  padding: 14px 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 18px -4px rgb(0, 0, 0, 0.35), 0 2px 6px -1px rgb(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cardContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -6px rgb(0, 0, 0, 0.45);
+}
+
+/* Фоновые градиенты */
+.gradient_purple {
+  background: linear-gradient(135deg, #6d28d9 0%, #9333ea 50%, #ec4899 100%);
+}
+
+.gradient_dark {
+  background: linear-gradient(135deg, #18181b 0%, #27272a 50%, #3f3f46 100%);
+}
+
+.gradient_emerald {
+  background: linear-gradient(135deg, #065f46 0%, #059669 50%, #10b981 100%);
+}
+
+.gradient_sunset {
+  background: linear-gradient(135deg, #b45309 0%, #ea580c 50%, #e11d48 100%);
+}
+
+.gradient_blue {
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #06b6d4 100%);
+}
+
+/* Декоративные световые блики */
+.cardContainer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 20%, rgb(255, 255, 255, 0.22) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Верхняя строка: Банк/Логотип и Система */
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.bankBrand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+}
+
+.systemBadge {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgb(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+/* Mastercard круги */
+.mastercardCircles {
+  display: flex;
+  position: relative;
+  width: 36px;
+  height: 24px;
+}
+
+.circleRed {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #eb001b;
+  position: absolute;
+  left: 0;
+}
+
+.circleYellow {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f79e1b;
+  position: absolute;
+  right: 0;
+  opacity: 0.9;
+}
+
+/* МИР бэйдж */
+.mirBadge {
+  background: rgb(255, 255, 255, 0.92);
+  color: #0b9b47;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+/* Чип и бесконтакт */
+.chipRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  margin-top: 1px;
+}
+
+.chip {
+  width: 32px;
+  height: 24px;
+  background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #f3e5ab 100%);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: inset 0 0 3px rgb(0, 0, 0, 0.35);
+}
+
+.chip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgb(0, 0, 0, 0.25);
+}
+
+.contactless {
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+}
+
+/* Номер карты */
+.numberRow {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 3px rgb(0, 0, 0, 0.4);
+  z-index: 1;
+  margin: 4px 0;
+}
+
+/* Нижняя строка: владелец и срок */
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.holderCol,
+.expiryCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 2px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.expiryValue {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: 600;
+}

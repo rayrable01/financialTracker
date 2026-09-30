@@ -2,37 +2,37 @@
 
 :root,
 :root[data-theme='light'] {
-  --globalAroundMargin: 30px;
+  --globalAroundMargin: 16px;
 
   /* Page background */
   --bg: #f0f2f5;
 
   /* Content area */
   --rightWrapperBg: #e4e6eb;
-  --contentBg: #ffffff;
+  --contentBg: #fff;
 
   /* Typography */
   --text: #111827;
   --textSecondary: #6b7280;
 
   /* Left Sidebar */
-  --leftSidebarBg: #000000;
-  --leftSidebarText: #ffffff;
+  --leftSidebarBg: #000;
+  --leftSidebarText: #fff;
   --leftSidebarTextMuted: #9ca3af;
   --leftSidebarHover: #1a1818;
-  --leftSidebarBorder: rgba(255, 255, 255, 0.15);
+  --leftSidebarBorder: rgb(255, 255, 255, 0.15);
 
   /* Controls (Search, buttons, switcher) */
   --controlBg: #e5e7eb;
   --controlBorder: #d1d5db;
   --controlHoverBg: #dbe0e6;
-  --controlActiveBg: #ffffff;
+  --controlActiveBg: #fff;
 
   color-scheme: light;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 :root[data-theme='dark'] {
@@ -48,11 +48,11 @@
   --textSecondary: #9ca3af;
 
   /* Left Sidebar */
-  --leftSidebarBg: #000000;
-  --leftSidebarText: #ffffff;
+  --leftSidebarBg: #000;
+  --leftSidebarText: #fff;
   --leftSidebarTextMuted: #9ca3af;
   --leftSidebarHover: #1a1818;
-  --leftSidebarBorder: rgba(255, 255, 255, 0.12);
+  --leftSidebarBorder: rgb(255, 255, 255, 0.12);
 
   /* Controls (Search, buttons, switcher) */
   --controlBg: #222430;
@@ -80,7 +80,7 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   color: var(--text);
   background: var(--bg);
   transition: background-color 0.25s ease, color 0.25s ease;

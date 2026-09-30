@@ -12,7 +12,7 @@ export const RightSideLayout = () => {
           {routes.map(({ path, component: Component }) => (
             <Route key={path} path={path} element={<Component />} />
           ))}
-          <Route path="*" element={<Navigate to='/dasboard' replace />} />
+          <Route path="*" element={<Navigate to='/dashboard' replace />} />
         </Routes>
       </div>
     </div>

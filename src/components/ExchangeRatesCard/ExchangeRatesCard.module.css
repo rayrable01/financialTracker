@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  background-color: var(--controlBg);
+  border: 1px solid var(--controlBorder);
+  padding: 8px 14px;
+  border-radius: 8px;
+  min-width: 210px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--textSecondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.date {
+  font-size: 10px;
+  color: var(--textSecondary);
+  font-weight: 500;
+}
+
+.values {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  background: var(--bg);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--controlBorder);
+  font-size: 12px;
+}
+
+.code {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--textSecondary);
+}
+
+.rate {
+  font-weight: 600;
+  color: var(--text);
+}
