@@ -1,10 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { Card, CreateCardDto, UpdateCardDto } from "../types/cards";
 
+import { API_URL } from "./apiRouter";
+
 export const cardsApi = createApi({
   reducerPath: "cardsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "/api",
+    baseUrl: API_URL,
   }),
   tagTypes: ["Cards"],
   endpoints: (builder) => ({
