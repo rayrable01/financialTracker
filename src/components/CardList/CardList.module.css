@@ -44,7 +44,10 @@
   border-radius: 12px;
   background-color: var(--controlBg);
   border: 1px solid var(--controlBorder);
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
   position: relative;
   overflow: hidden;
 }

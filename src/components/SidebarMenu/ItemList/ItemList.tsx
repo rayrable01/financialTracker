@@ -1,6 +1,6 @@
-import type { LucideIcon } from "lucide-react";
-import type { FC } from "react";
-import { Link } from "react-router-dom";
+import type { LucideIcon } from 'lucide-react';
+import type { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './ItemList.module.css';
 

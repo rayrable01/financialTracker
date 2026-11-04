@@ -1,8 +1,8 @@
-import type { FC } from "react";
-import type { GeneralItemsType, MenuItemsType } from "../../../utils/const";
+import type { FC } from 'react';
+import type { GeneralItemsType, MenuItemsType } from '../../../utils/const';
 
 import styles from './MenuList.module.css';
-import { ItemList } from "../ItemList/ItemList";
+import { ItemList } from '../ItemList/ItemList';
 
 interface MenuListProps {
   itemsList: MenuItemsType | GeneralItemsType;
@@ -19,7 +19,7 @@ export const MenuList: FC<MenuListProps> = ({ itemsList, title }) => {
             <li key={url} className={styles.listItem}>
               <ItemList title={label} href={url} icon={icon} />
             </li>
-          )
+          );
         })}
       </ul>
     </div>

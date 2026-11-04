@@ -63,9 +63,7 @@ export const TotalBalanceCard: FC<TotalBalanceCardProps> = ({ cards }) => {
         </div>
       </div>
 
-      <div className={styles.amount}>
-        {formatMoney(totalConvertedBalance, selectedCurrency)}
-      </div>
+      <div className={styles.amount}>{formatMoney(totalConvertedBalance, selectedCurrency)}</div>
 
       {currencyKeys.length > 1 && (
         <div className={styles.originalBreakdown}>

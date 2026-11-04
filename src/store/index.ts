@@ -1,15 +1,14 @@
+import { baseApi } from '@/api/baseApiConfiguration';
 import { configureStore } from '@reduxjs/toolkit';
-import { setupListeners } from '@reduxjs/toolkit/query';
-import { cardsApi } from '../api/cardsApi';
-import { ratesApi } from '../api/ratesApi';
+import { setupListeners, type BaseQueryFn } from '@reduxjs/toolkit/query';
+
+export type Interceptor = (baseQuery: BaseQueryFn) => BaseQueryFn;
 
 export const store = configureStore({
   reducer: {
-    [cardsApi.reducerPath]: cardsApi.reducer,
-    [ratesApi.reducerPath]: ratesApi.reducer,
+    [baseApi.reducerPath]: baseApi.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(cardsApi.middleware, ratesApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(baseApi.middleware),
 });
 
 setupListeners(store.dispatch);

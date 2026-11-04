@@ -53,7 +53,8 @@ cardsRouter.get('/cards', async (_req: Request, res: Response<Card[]>) => {
 // POST /cards - создать новую карту
 cardsRouter.post('/cards', async (req: Request, res: Response<Card | { message: string }>) => {
   await simulateDelay(350);
-  const { cardNumber, cardHolder, expiryDate, cardType, balance, currency, gradient } = req.body as CreateCardDto;
+  const { cardNumber, cardHolder, expiryDate, cardType, balance, currency, gradient } =
+    req.body as CreateCardDto;
 
   if (!cardNumber || !cardHolder || !expiryDate) {
     res.status(400).json({
@@ -123,19 +124,22 @@ cardsRouter.put('/cards/:id', async (req: Request, res: Response<Card | { messag
 });
 
 // DELETE /cards/:id - удалить карту
-cardsRouter.delete('/cards/:id', async (req: Request, res: Response<Card | { message: string }>) => {
-  await simulateDelay(250);
-  const { id } = req.params;
-  const cardIndex = cardsDatabase.findIndex((c) => c.id === id);
+cardsRouter.delete(
+  '/cards/:id',
+  async (req: Request, res: Response<Card | { message: string }>) => {
+    await simulateDelay(250);
+    const { id } = req.params;
+    const cardIndex = cardsDatabase.findIndex((c) => c.id === id);
 
-  if (cardIndex === -1) {
-    res.status(404).json({
-      message: 'Карта не найдена',
-    });
-    return;
-  }
+    if (cardIndex === -1) {
+      res.status(404).json({
+        message: 'Карта не найдена',
+      });
+      return;
+    }
 
-  const [removedCard] = cardsDatabase.splice(cardIndex, 1);
+    const [removedCard] = cardsDatabase.splice(cardIndex, 1);
 
-  res.json(removedCard);
-});
+    res.json(removedCard);
+  },
+);

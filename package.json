@@ -7,44 +7,43 @@
     "dev": "concurrently \"npm run dev:stub\" \"vite\"",
     "dev:stub": "tsx watch server/index.ts",
     "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "eslint . && stylelint \"src/**/*.css\"",
     "lint:js": "eslint .",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "preview": "vite preview",
-    "start": "vite preview",
     "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "eslint"
+      "eslint --fix",
+      "prettier --write"
     ],
     "*.css": [
-      "stylelint --fix"
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,html,yml,yaml}": [
+      "prettier --write"
     ]
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/material": "^9.4.0",
     "@reduxjs/toolkit": "^2.12.0",
     "card-validator": "^10.0.4",
     "clsx": "^2.1.1",
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "imask": "^7.6.1",
     "lucide-react": "^1.42.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-hook-form": "^7.89.0",
     "react-imask": "^7.6.1",
     "react-redux": "^9.3.0",
-    "react-router-dom": "^7.18.3",
-    "vite-plugin-svgr": "^5.2.0"
+    "react-router-dom": "^7.18.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^21.2.2",
@@ -61,18 +60,18 @@
     "@vitejs/plugin-react": "^6.1.0",
     "@vitest/coverage-v8": "^5.0.2",
     "concurrently": "^10.0.5",
+    "cors": "^2.8.6",
     "eslint": "^10.9.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.4",
+    "express": "^5.2.1",
     "globals": "^17.11.0",
     "husky": "^9.1.7",
     "jsdom": "^29.1.1",
-    "nodemon": "^3.1.14",
     "prettier": "^3.9.6",
     "stylelint": "^17.15.0",
     "stylelint-config-standard": "^40.0.0",
-    "ts-node": "^10.9.2",
     "tsx": "^4.23.13",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.67.0",

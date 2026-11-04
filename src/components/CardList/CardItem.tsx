@@ -13,13 +13,7 @@ interface CardItemProps {
   onDelete: (id: string) => void;
 }
 
-export const CardItem: FC<CardItemProps> = ({
-  card,
-  isEditing,
-  isDeleting,
-  onEdit,
-  onDelete,
-}) => {
+export const CardItem: FC<CardItemProps> = ({ card, isEditing, isDeleting, onEdit, onDelete }) => {
   const [confirmDelete, setConfirmDelete] = useState(false);
 
   const handleDeleteClick = () => {

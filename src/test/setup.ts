@@ -1,10 +1,10 @@
-import '@testing-library/jest-dom/vitest'
-import { cleanup } from '@testing-library/react'
-import { afterEach } from 'vitest'
+import '@testing-library/jest-dom/vitest';
+import { cleanup } from '@testing-library/react';
+import { afterEach } from 'vitest';
 
 afterEach(() => {
-  cleanup()
-})
+  cleanup();
+});
 
 // Polyfill window.matchMedia for jsdom
 Object.defineProperty(window, 'matchMedia', {
@@ -19,4 +19,4 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: () => {},
     dispatchEvent: () => false,
   }),
-})
+});

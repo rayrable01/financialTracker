@@ -18,18 +18,11 @@ RUN npm run build
 # ─────────────────────────────────────────────
 FROM nginx:alpine AS runtime
 
+# Копируем оптимизированную конфигурацию Nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Копируем готовый бандл фронтенда из builder
 COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Настройка SPA-роутинга (fallback на index.html для React Router)
-RUN printf 'server {\n\
-    listen 80;\n\
-    location / {\n\
-        root /usr/share/nginx/html;\n\
-        index index.html;\n\
-        try_files $uri $uri/ /index.html;\n\
-    }\n\
-}\n' > /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 

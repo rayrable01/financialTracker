@@ -30,7 +30,6 @@ export const CardPage = () => {
 
   return (
     <div className={styles.page}>
-      {/* Заголовок страницы и декомпозированная сводка по балансу и курсам */}
       <div className={styles.pageHeader}>
         <div className={styles.headerInfo}>
           <h1 className={styles.pageTitle}>Управление картами</h1>
@@ -51,18 +50,15 @@ export const CardPage = () => {
         </div>
       </div>
 
-      {/* Баннер обратной связи */}
-      {(feedback || queryError) && (
+      {feedback || queryError ? (
         <FeedbackBanner
           type={queryError ? 'error' : feedback!.type}
           message={errorMessage || ''}
           onClose={() => setFeedback(null)}
         />
-      )}
+      ) : null}
 
-      {/* Двухколоночный компактный макет */}
       <div className={styles.splitLayout}>
-        {/* Левая колонка: Визуальная карта и форма */}
         <section className={styles.formSection}>
           <div className={styles.visualWrapper}>
             <CardVisual
@@ -84,7 +80,6 @@ export const CardPage = () => {
           />
         </section>
 
-        {/* Правая колонка: Список привязанных карт */}
         <section className={styles.listSection}>
           <CardList
             cards={cards}

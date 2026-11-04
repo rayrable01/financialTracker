@@ -24,23 +24,18 @@ export const CardForm: FC<CardFormProps> = ({
   isSubmitting,
   onLiveChange,
 }) => {
-  const {
-    register,
-    control,
-    errors,
-    isEditing,
-    setValue,
-    handleSubmit,
-    rules,
-  } = useCardForm({ initialData, isSubmitting, onSubmit, onLiveChange });
+  const { register, control, errors, isEditing, setValue, handleSubmit, rules } = useCardForm({
+    initialData,
+    isSubmitting,
+    onSubmit,
+    onLiveChange,
+  });
 
   const gradient = useWatch({ control, name: 'gradient' });
 
   return (
     <form className={styles.form} onSubmit={handleSubmit} noValidate>
-      <h3 className={styles.title}>
-        {isEditing ? 'Редактировать карту' : 'Добавить новую карту'}
-      </h3>
+      <h3 className={styles.title}>{isEditing ? 'Редактировать карту' : 'Добавить новую карту'}</h3>
 
       {/* Выбор цвета пластика */}
       <CardGradientPicker
@@ -146,11 +141,7 @@ export const CardForm: FC<CardFormProps> = ({
       />
 
       {/* Кнопки действий */}
-      <CardFormActions
-        isEditing={isEditing}
-        isSubmitting={isSubmitting}
-        onCancel={onCancel}
-      />
+      <CardFormActions isEditing={isEditing} isSubmitting={isSubmitting} onCancel={onCancel} />
     </form>
   );
 };

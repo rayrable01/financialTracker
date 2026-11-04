@@ -46,7 +46,10 @@
   color: var(--text);
   font-size: 13px;
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s;
 }
 
 .input:focus {
@@ -94,7 +97,9 @@
   border: 2px solid transparent;
   cursor: pointer;
   outline: none;
-  transition: transform 0.2s, border-color 0.2s;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
   padding: 0;
 }
 
@@ -149,7 +154,9 @@
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s, opacity 0.2s;
+  transition:
+    background-color 0.2s,
+    opacity 0.2s;
 }
 
 .submitButton:hover:not(:disabled) {

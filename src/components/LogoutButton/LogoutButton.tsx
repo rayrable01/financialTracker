@@ -1,4 +1,4 @@
-import { LogOut } from "lucide-react"
+import { LogOut } from 'lucide-react';
 
 import styles from './LogoutButton.module.css';
 
@@ -8,5 +8,5 @@ export const LogoutButton = () => {
       <LogOut size={20} />
       Log out
     </button>
-  )
-}
+  );
+};

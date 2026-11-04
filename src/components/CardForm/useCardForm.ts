@@ -1,7 +1,13 @@
 import { useForm, useWatch, type SubmitHandler, Controller } from 'react-hook-form';
 import cardValidator from 'card-validator';
 import { useEffect } from 'react';
-import type { Card, CardPreview, CreateCardDto, PaymentSystem, UpdateCardDto } from '../../types/cards';
+import type {
+  Card,
+  CardPreview,
+  CreateCardDto,
+  PaymentSystem,
+  UpdateCardDto,
+} from '../../types/cards';
 import { detectCardType } from '../../utils/cardUtils';
 
 export { Controller };
@@ -23,7 +29,12 @@ interface UseCardFormProps {
   onLiveChange?: (preview: CardPreview) => void;
 }
 
-export const useCardForm = ({ initialData, isSubmitting, onSubmit, onLiveChange }: UseCardFormProps) => {
+export const useCardForm = ({
+  initialData,
+  isSubmitting,
+  onSubmit,
+  onLiveChange,
+}: UseCardFormProps) => {
   const isEditing = Boolean(initialData);
 
   const {
@@ -71,7 +82,6 @@ export const useCardForm = ({ initialData, isSubmitting, onSubmit, onLiveChange 
       gradient: watchedGradient ?? 'purple',
     });
   }, [watchedCardNumber, watchedCardHolder, watchedExpiryDate, watchedGradient, onLiveChange]);
-
 
   const onValid: SubmitHandler<CardFormFields> = async (data) => {
     if (isEditing) {

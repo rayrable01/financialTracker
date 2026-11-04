@@ -1,5 +1,5 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { ExchangeRatesData } from '../types/currency';
+import { baseApi } from '@/api/baseApiConfiguration';
 
 interface CbrValuteItem {
   Value: number;
@@ -13,11 +13,7 @@ interface CbrDailyResponse {
   };
 }
 
-export const ratesApi = createApi({
-  reducerPath: 'ratesApi',
-  baseQuery: fetchBaseQuery({
-    baseUrl: 'https://www.cbr-xml-daily.ru',
-  }),
+export const ratesApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getExchangeRates: builder.query<ExchangeRatesData, void>({
       query: () => '/daily_json.js',

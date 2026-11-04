@@ -8,7 +8,10 @@ export const Subscription = () => {
         Switch to Pro
         <Star size={20} />
       </h3>
-      <p className={styles.descr}>Unlock advanced analytics, unlimited projects and priorty support to take your workflow to the next level</p>
+      <p className={styles.descr}>
+        Unlock advanced analytics, unlimited projects and priorty support to take your workflow to
+        the next level
+      </p>
     </div>
-  )
-}
+  );
+};

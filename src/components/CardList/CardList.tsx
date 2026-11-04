@@ -39,7 +39,9 @@ export const CardList: FC<CardListProps> = ({
           <CreditCard size={40} className={styles.emptyIcon} />
           <div>
             <p className={styles.emptyText}>У вас пока нет привязанных карт</p>
-            <p className={styles.emptySubtext}>Заполните форму слева, чтобы добавить первую карту</p>
+            <p className={styles.emptySubtext}>
+              Заполните форму слева, чтобы добавить первую карту
+            </p>
           </div>
         </div>
       ) : (

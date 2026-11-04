@@ -1,3 +1,3 @@
 export const TransactionsPage = () => {
-  return <h1>TransactionsPage</h1>
-}
+  return <h1>TransactionsPage</h1>;
+};

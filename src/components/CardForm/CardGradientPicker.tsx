@@ -16,10 +16,7 @@ interface CardGradientPickerProps {
   onSelect: (gradient: string) => void;
 }
 
-export const CardGradientPicker: FC<CardGradientPickerProps> = ({
-  selectedGradient,
-  onSelect,
-}) => {
+export const CardGradientPicker: FC<CardGradientPickerProps> = ({ selectedGradient, onSelect }) => {
   return (
     <div className={styles.gradientSelectorRow}>
       <span className={styles.label}>Цвет пластика:</span>
@@ -36,9 +33,7 @@ export const CardGradientPicker: FC<CardGradientPickerProps> = ({
             onClick={() => onSelect(id)}
             title={label}
           >
-            {selectedGradient === id && (
-              <Check size={12} color="#fff" style={{ margin: 'auto' }} />
-            )}
+            {selectedGradient === id && <Check size={12} color="#fff" style={{ margin: 'auto' }} />}
           </button>
         ))}
       </div>

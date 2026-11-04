@@ -14,5 +14,16 @@
   border-radius: 17px;
   height: 100%;
   padding: 15px;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--textSecondary);
+  font-size: 14px;
 }

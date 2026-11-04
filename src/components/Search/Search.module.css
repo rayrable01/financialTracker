@@ -3,9 +3,13 @@
   position: relative;
 }
 
+.mainWrapper {
+  position: relative;
+}
+
 .searchIcon {
   position: absolute;
-  top: 7px;
+  top: 3px;
   left: 8px;
   color: var(--textSecondary);
   pointer-events: none;
