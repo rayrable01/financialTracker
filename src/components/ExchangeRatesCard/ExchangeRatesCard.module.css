@@ -1,8 +1,8 @@
-.card {
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 6px;
+  gap: 20px;
   background-color: var(--controlBg);
   border: 1px solid var(--controlBorder);
   padding: 8px 14px;
@@ -35,6 +35,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .badge {

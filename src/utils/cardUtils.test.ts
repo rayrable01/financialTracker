@@ -127,6 +127,13 @@ describe('Утилиты для работы с картами (cardUtils)', () 
       expect(formatted).toMatch(/сентябр/i);
     });
 
+    it('форматирует timestamp (number) в русскоязычное текстовое представление', () => {
+      const timestamp = new Date('2026-09-30T10:00:00.000Z').getTime();
+      const formatted = formatExchangeRateDate(timestamp);
+      expect(formatted).toMatch(/2026/);
+      expect(formatted).toMatch(/сентябр/i);
+    });
+
     it('возвращает исходное значение при передаче невалидной даты', () => {
       expect(formatExchangeRateDate('invalid-date-string')).toBe('invalid-date-string');
     });

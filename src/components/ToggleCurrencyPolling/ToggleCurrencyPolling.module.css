@@ -1,0 +1,24 @@
+.toggleForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.labelInput,
+.labelSelect {
+  display: flex;
+  align-items: center;
+  color: var(--textSecondary);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.labelInput input {
+  margin-right: 10px;
+}
+
+.labelSelect select {
+  margin-right: 10px;
+}

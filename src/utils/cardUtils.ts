@@ -66,17 +66,17 @@ export const convertCurrency = (
 /**
  * Форматирование даты актуальности курса
  */
-export const formatExchangeRateDate = (dateStr: string): string => {
-  if (!dateStr) return '';
+export const formatExchangeRateDate = (dateVal?: string | number | null): string => {
+  if (dateVal === undefined || dateVal === null || dateVal === '') return '';
   try {
-    const d = new Date(dateStr);
-    if (isNaN(d.getTime())) return dateStr;
+    const d = new Date(dateVal);
+    if (isNaN(d.getTime())) return String(dateVal);
     return new Intl.DateTimeFormat('ru-RU', {
       day: 'numeric',
       month: 'long',
       year: 'numeric',
     }).format(d);
   } catch {
-    return dateStr;
+    return String(dateVal);
   }
 };
